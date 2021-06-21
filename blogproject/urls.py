@@ -20,6 +20,6 @@ from django.contrib.auth import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'',include('blog.urls')),
-    path(r'accounts/login/$',views.login,name='login'),
-    path(r'accounts/logout/$',views.logout,name='logout',kwargs={'next_page':'/'}),
+    path(r'accounts/login/$',views.LoginView,name='login'),
+    path(r'accounts/logout/$',views.LogoutView,name='logout',kwargs={'next_page':'/'}),
 ]
