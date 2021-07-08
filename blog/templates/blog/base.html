@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
     <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+one" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default techfont custom-navbar">
@@ -47,7 +48,7 @@
                     <a href="{% url 'logout' %}">Log out</a>
                 </li>
                 <li>
-                    Welcome: {{ user.username }}
+                    <a>Welcome: {{ user.username }}</a>
                 </li>
                 {% else %}
                 <li>
