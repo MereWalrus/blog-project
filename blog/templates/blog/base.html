@@ -49,9 +49,9 @@
                 <li>
                     Welcome: {{ user.username }}
                 </li>
+                {% else %}
                 <li>
-                    {% else %}
-                    <li><a class="nav navbar-right" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <a class="nav navbar-right" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>
                 </li>
                 {% endif %}
             </ul>
